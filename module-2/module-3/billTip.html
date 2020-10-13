@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Tip</title>
+</head>
+<body>
+    
+<script src="billTip.js"></script>
+
+<script>
+var billBeforeTip = 40.00; // Bill before tip
+
+    var tip = 12.5;
+    
+    var tipAmount =  (tip * billBeforeTip) / 100;
+    //BODMAS brackets Division multiplication addition subtraction
+    var receipt = 'The bill plus tip is ' + (billBeforeTip + tipAmount); // concatenating
+    
+    console.log( receipt );
+    </script>
+
+
+</body>
+</html>
