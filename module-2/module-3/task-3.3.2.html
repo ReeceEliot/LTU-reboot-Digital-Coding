@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3.3.2</title>
+</head>
+<body>
+    
+<script>
+
+function drinkOrder( drink, size ) {
+
+   var drinkOrder = drink.toLowerCase();
+
+
+switch(drinkOrder) { 
+
+case 'cola' :
+console.log('You have ordered a ' + size + ' ' + drink );
+break;
+case 'lemonade' :
+console.log('You have ordered a ' + size + ' ' + drink );
+break;
+case 'orangeade' :
+console.log('You have ordered a ' + size + ' ' + drink );
+break;
+default:
+console.log('error');
+break;
+
+}
+
+}
+
+drinkOrder('Cola', 'medium');
+
+
+</script>
+
+
+</body>
+</html>
+
+// only need one argument in the switch statement
+// customer should be able to select the following: cola, lemonade and orangeade
+// customer can pick small, medium and large
+
+// if the drink they pick is cola we want to console the message out
+// how we control the flow of the program - keeping what could happen covered
