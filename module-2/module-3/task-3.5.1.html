@@ -8,7 +8,7 @@
 <body>
     
 <script>
-
+// Mean function
 var data = [ 25, 17, 40, 63, 25, 54, 70 ]; // list of random numbers
 
 function mean( arr ) {
@@ -22,9 +22,39 @@ return sum / arr.length;
 
 }
 var meanOf = mean( data );
-console.log( meanOf );
+console.log( 'Mean of : ' + data + '=' + meanOf );
 // Mean function
 
+// Median function
+
+function median( arr ) {
+
+var median = 0;
+var arrLen = arr.length;
+// before [ random order ]
+    arr.sort();
+    // after [ ascending order ]
+
+if ( arrLen / 2 === 0 ) {
+// Average of two middle numbers
+median = ( arr[ arrLen / 2 - 1]);
+
+
+} else { // is odd
+ 
+ // middle number only
+ median = arr[ ( arrLen - 1) / 2 ];
+
+}
+
+return median;
+
+}
+
+var medianOf = median( data );
+console.log( 'Median of : ' + data + ' = ' + medianOf );
+
+// Median function
 
 
 
