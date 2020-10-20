@@ -71,8 +71,11 @@ quantity:3,
 price:.4
 }];
 
-function shoppingCartTotalDiscount( arr ) {
-    let totalDiscount
+function shoppingCartTotalPrice( arr ) {
+    let totalPrice = 0;
+    for( let index = 0; index < arr.length; index++ )
+
+    totalPrice = totalPrice + ( arr[ index ].price %20 arr[ index ].quantity );
 }
 
 // 1. Create a function that takes 1 argument 
