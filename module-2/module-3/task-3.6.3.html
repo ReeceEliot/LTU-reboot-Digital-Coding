@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Events</title>
+    <title>Task 3.6.3</title>
 </head>
 <body>
     
 <img src="https://images.unsplash.com/photo-1587994820974-515b639d31ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=656&q=80" alt="">
 
+    <script>
 
-<script>
+var image = document.querySelector('img');
 
-var button = document.querySelector('img');
+image.addEventListener('mouseover', function(event) {
 
-button.addEventListener('climouseoverck', function( event ) {
+    image.style.border = '5px solid yellow';
 
-button.textContent = 'This is an image';
+image.style.width = '200px';
 
-console.log( event );
 
-} );
+})
 
-// could add if statement
 
-</script>
+    </script>
 
 
 
