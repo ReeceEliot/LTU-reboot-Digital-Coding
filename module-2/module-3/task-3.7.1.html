@@ -3,7 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 3.7.1 - Animal Filter Using Jsdiv</title>
+    <title>Task 3.7.1 - Animal Filter Using Js</title>
+    <style>
+div.main {
+    padding: 0px;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+div.selection-container{
+    padding: 1em;
+    margin: 1em;
+}
+
+.btn {
+    border: 1px solid grey;
+
+}
+
+.btn:hover {
+    background-color: blue;
+    color: #fff;
+}
+
+.active {
+    background-color: tomato;
+    color: floralwhite;
+}
+
+.image-selections {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images {
+    margin: 1em;
+}
+
+.main img {
+    width: 200px;
+    border: 5px solid green;
+}
+
+
+    </style>
 </head>
 <body>
    
@@ -49,7 +92,33 @@
 </div> <!-- End of main container -->
 <script>
 
+const selectionButtons = document.querySelectorAll( 'button.selection' );
 
+const allImages = document.querySelectorAll('.main .image-selections .images');
+
+// Toggle Images - Show / Hide
+
+function toggleImages( dataClass ) {
+if( dataclass === 'all') {
+allImages.forEach( function( image ) {
+image.style.display = 'block';
+});
+} else {
+  allImages.forEach( function( image ) {
+    image.dataset.class === dataClass ? image.style.display = 'block': image.style.display = 'none'; //
+  });
+}
+}
+
+selectionButtons.forEach( function( item ) {
+
+    item.addEventListener('click', function() {
+
+toggleImages( item.dataset.class );
+
+    });
+
+});
 
 </script>
 
